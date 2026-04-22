@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Austin Plumber | ATX Plumbing Co — Fast, Reliable Service</title>
-  <meta name="description" content="Looking for a plumber in Austin? Call ATX Plumbing Co for same-day service. Leak repair, drain cleaning, water heaters & more.">
+  <meta name="description" content="Looking for a plumber in Austin? Call ATX Plumbing Co for same-day service. Leak repair, drain cleaning, water heaters & more. 512-555-0100.">
   <link rel="canonical" href="https://turnkeycfo.github.io/site-atx-plumbing-co/">
   <meta property="og:title" content="Austin Plumber | ATX Plumbing Co — Fast, Reliable Service">
-  <meta property="og:description" content="Looking for a plumber in Austin? Call ATX Plumbing Co for same-day service. Leak repair, drain cleaning, water heaters & more.">
+  <meta property="og:description" content="Looking for a plumber in Austin? Call ATX Plumbing Co for same-day service. Leak repair, drain cleaning, water heaters & more. 512-555-0100.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://turnkeycfo.github.io/site-atx-plumbing-co/">
   <meta name="robots" content="index, follow">
@@ -16,7 +16,7 @@
     "@context": "https://schema.org",
     "@type": "Plumber",
     "name": "ATX Plumbing Co",
-    "telephone": "",
+    "telephone": "512-555-0100",
     "areaServed": "Austin",
     "url": "https://turnkeycfo.github.io/site-atx-plumbing-co/",
     "priceRange": "$$", "address": {"@type": "PostalAddress", "addressLocality": "Austin", "addressRegion": "TX", "addressCountry": "US"}
@@ -555,7 +555,10 @@
         inset 0 0 0 1px rgba(255,255,255,0.04);
       overflow: hidden;
       z-index: 2;
-      pointer-events: none;
+      /* Hidden by default — GSAP takes over on scroll */
+      opacity: 0;
+      transform: translateY(105%);
+      will-change: transform, opacity;
     }
     .showcase-sheen {
       position: absolute;
@@ -628,12 +631,15 @@
       position: relative;
       min-height: 200px;
     }
-    .showcase-photo-panel img {
+    .showcase-photo-bg {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      display: block;
+      background-image: var(--hero-img);
+      background-size: cover;
+      background-position: center;
+      transition: transform 800ms var(--easing);
     }
+    .showcase-photo-panel:hover .showcase-photo-bg { transform: scale(1.04); }
     .showcase-photo-panel::after {
       content: '';
       position: absolute;
@@ -979,21 +985,23 @@
       text-transform: uppercase;
       color: var(--tod);
     }
-    /* About photo */
+    /* About photo — uses --hero-img CSS var so it's always industry-specific */
     .about-photo-col {
       border-radius: 6px;
       overflow: hidden;
       position: relative;
       min-height: 360px;
     }
-    .about-photo-col img {
+    .about-photo-bg {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      display: block;
+      min-height: 360px;
+      background-image: var(--hero-img);
+      background-size: cover;
+      background-position: center;
       transition: transform 600ms var(--easing);
     }
-    .about-photo-col:hover img { transform: scale(1.04); }
+    .about-photo-col:hover .about-photo-bg { transform: scale(1.04); }
     .about-photo-col::before {
       content: '';
       position: absolute;
@@ -1336,7 +1344,7 @@
 
   <nav aria-label="Main navigation">
     <span class="nav-brand">ATX Plumbing Co</span>
-    <a href="#" class="nav-tel" aria-label="Call ATX Plumbing Co">Call Now</a>
+    <a href="tel:5125550100" class="nav-tel" aria-label="Call ATX Plumbing Co">Call Now</a>
   </nav>
 
   <main>
@@ -1345,7 +1353,7 @@
       <div class="hero-deco-ring" aria-hidden="true"></div>
 
       <!-- Phase 1: Hero text (always visible; fades on scroll w/ GSAP) -->
-      <div class="gsap-hero-text">
+      <div class="gsap-hero-text hero-content">
         <p class="hero-eyebrow">Austin &middot; Plumber</p>
         <h1 class="hero-tagline" id="hero-heading">Austin's Most Trusted Plumber.</h1>
         <p class="hero-subtext">Fast, reliable plumbing services for Austin homes and businesses.</p>
@@ -1366,7 +1374,7 @@
       </div>
 
       <div class="hero-cta">
-        <a href="#" class="btn btn-dark" aria-label="Call ATX Plumbing Co"><span class="btn-label">Call Now — Available Today</span></a>
+        <a href="tel:5125550100" class="btn btn-dark" aria-label="Call ATX Plumbing Co"><span class="btn-label">Call Now — Available Today</span></a>
         <a href="#cta-terminal" class="btn btn-outline">Get a Free Estimate</a>
       </div>
 
@@ -1393,15 +1401,12 @@
                 <span class="sc-label">Emergency Service</span>
               </div>
             </div>
-            <a href="#" class="liquid-glass-cta showcase-call-btn">
+            <a href="tel:5125550100" class="liquid-glass-cta showcase-call-btn">
               <span class="lg-inner">Call Now — Available Today</span>
             </a>
           </div>
           <div class="showcase-photo-panel">
-            <img
-              src="https://images.unsplash.com/photo-1621905251189-08b45249c0ac?w=900&auto=format&fit=crop&q=80"
-              alt="Professional Plumber at work"
-              loading="lazy">
+            <div class="showcase-photo-bg" role="img" aria-label="Professional Plumber at work"></div>
           </div>
         </div>
       </div>
@@ -1525,10 +1530,7 @@
           </div>
         </div>
         <div class="about-photo-col reveal">
-          <img
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop&q=80"
-            alt="Professional Plumber team at work"
-            loading="lazy">
+          <div class="about-photo-bg" role="img" aria-label="Professional Plumber team at work"></div>
           <div class="about-photo-badge">
             <span>Serving Austin &amp; Surrounding Areas</span>
           </div>
@@ -1545,13 +1547,13 @@
         <div class="cta-grid">
           <div>
             <h2 class="cta-headline reveal" id="cta-heading">Fix leaks fast.</h2>
-            <a href="#" class="cta-tel-btn reveal" aria-label="Call ATX Plumbing Co at ">
+            <a href="tel:5125550100" class="cta-tel-btn reveal" aria-label="Call ATX Plumbing Co at 512-555-0100">
               <span class="cta-btn-label">Call Now — Available Today</span>
             </a>
           </div>
           <!-- GSAP CDN (desktop cinematic hero) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
   <script>
     /* ── Cursor glow trail (desktop only) ─────────────────────── */
