@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Austin Plumber | ATX Plumbing Co — Fast, Reliable Service</title>
+  <meta name="description" content="Looking for a plumber in Austin? Call ATX Plumbing Co for same-day service. Leak repair, drain cleaning, water heaters & more. 512-847-0210.">
+  <link rel="canonical" href="https://turnkeycfo.github.io/site-atx-plumbing-co/">
+  <meta property="og:title" content="Austin Plumber | ATX Plumbing Co — Fast, Reliable Service">
+  <meta property="og:description" content="Looking for a plumber in Austin? Call ATX Plumbing Co for same-day service. Leak repair, drain cleaning, water heaters & more. 512-847-0210.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://turnkeycfo.github.io/site-atx-plumbing-co/">
+  <meta name="robots" content="index, follow">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "ATX Plumbing Co",
+    "telephone": "512-847-0210",
+    "areaServed": "Austin",
+    "url": "https://turnkeycfo.github.io/site-atx-plumbing-co/",
+    "priceRange": "$$", "address": {"@type": "PostalAddress", "addressLocality": "Austin", "addressRegion": "TX", "addressCountry": "US"}
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================ */
+    /* MANDATORY FIRST: prefers-reduced-motion                      */
+    /* ============================================================ */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ============================================================ */
+    /* CSS CUSTOM PROPERTIES — plumber / industrial-professional    */
+    /* ============================================================ */
+    :root {
+      --cp:       #1B4F8A;
+      --cp-dark:  #0F3562;
+      --cp-light: #2E6FBA;
+      --accent:   #1A2B3D;
+      --sd:       #FFFFFF;
+      --sm:       #F0F6FF;
+      --sl:       #E1EBF8;
+      --tod:      #1A2B3D;
+      --tol:      #FFFFFF;
+      --hover:    #0F3562;
+      --focus:    #1B4F8A;
+      --err:      #D32F2F;
+      --ok:       #2E7D32;
+      --hf:       'DM Serif Display', Georgia, 'Times New Roman', serif;
+      --bf:       'Work Sans', 'Helvetica Neue', Arial, sans-serif;
+      --easing:   cubic-bezier(0.33, 1, 0.68, 1);
+      --dur-fast: 150ms;
+      --dur-base: 400ms;
+      --dur-slow: 800ms;
+      /* Shimmer colors for this industry (dark hero = white shimmer) */
+      --shimmer-a:   #FFFFFF;
+      --shimmer-b:   rgba(168, 210, 255, 0.85);
+      --shimmer-c:   rgba(220, 238, 255, 0.65);
+      /* Hero image */
+      --hero-img: url('https://images.unsplash.com/photo-1621905251189-08b45249c0ac?w=1600&auto=format&fit=crop&q=80');
+      /* Star color */
+      --star-color: #1B4F8A;
+    }
+
+    /* ============================================================ */
+    /* RESET & BASE                                                  */
+    /* ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--bf);
+      font-size: clamp(0.9rem, 2vw, 1.05rem);
+      line-height: 1.6;
+      color: var(--tod);
+      background: var(--sd);
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul[role="list"] { list-style: none; }
+
+    /* ============================================================ */
+    /* TYPOGRAPHY                                                    */
+    /* ============================================================ */
+    h1, h2, h3 {
+      font-family: var(--hf);
+      line-height: 0.95;
+      font-weight: 400;
+    }
+    h2 { font-size: clamp(2rem, 5vw, 3.5rem); }
+    h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+    p { max-width: 65ch; }
+    .label {
+      font-family: var(--bf);
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      margin-bottom: 1rem;
+    }
+
+    /* ============================================================ */
+    /* NAVIGATION                                                    */
+    /* ============================================================ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 56px;
+      background: rgba(255,255,255,0.93);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--sl);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1rem, 4vw, 3rem);
+    }
+    .nav-brand {
+      font-family: var(--hf);
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      color: var(--tod);
+      max-width: calc(100% - 7rem);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .nav-tel {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cp);
+      color: #FFFFFF;
+      font-family: var(--bf);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0 1rem;
+      height: 40px;
+      min-width: 44px;
+      border-radius: 2px;
+      white-space: nowrap;
+      transition: background var(--dur-fast) var(--easing);
+    }
+    .nav-tel:hover { background: var(--hover); }
+    .nav-tel:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+    /* ============================================================ */
+    /* HERO — image layer + overlay + zoom entrance                 */
+    /* ============================================================ */
+    #hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--cp);
+      min-height: 100dvh;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 1fr auto;
+      padding-top: calc(56px + 2rem);
+      padding-left: clamp(1.5rem, 5vw, 4rem);
+      padding-right: clamp(1.5rem, 5vw, 4rem);
+      padding-bottom: clamp(3rem, 8vw, 5rem);
+    }
+    /* Background image layer with zoom entrance */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: -8%;
+      background:
+        linear-gradient(155deg, rgba(10,30,60,0.88) 0%, rgba(27,79,138,0.72) 45%, rgba(10,25,50,0.94) 100%),
+        var(--hero-img) center / cover no-repeat;
+      z-index: 0;
+      will-change: transform;
+      animation: hero-zoom-in 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    @keyframes hero-zoom-in {
+      from { transform: scale(1.1); }
+      to   { transform: scale(1.0); }
+    }
+    /* All hero children sit above the image layer */
+    #hero > * { position: relative; z-index: 1; }
+
+    .hero-content {
+      grid-column: 1 / 9;
+      grid-row: 1;
+      align-self: end;
+      padding-bottom: 1.5rem;
+      color: var(--tol);
+    }
+    .hero-eyebrow {
+      font-family: var(--bf);
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--tol);
+      opacity: 0.7;
+      margin-bottom: 1rem;
+    }
+    .hero-tagline {
+      font-family: var(--hf);
+      font-size: clamp(4rem, 12vw, 9rem);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      color: var(--tol);
+      overflow-wrap: break-word;
+    }
+    /* Shimmer applied per-word via JS-generated spans */
+    .hero-word {
+      display: inline-block;
+      clip-path: inset(100% 0 0 0);
+      will-change: clip-path, background-position;
+      animation:
+        clip-bottom-in var(--dur-base) var(--easing) forwards,
+        text-shimmer 5s 0.8s linear infinite;
+      background: linear-gradient(
+        90deg,
+        var(--shimmer-a) 0%,
+        var(--shimmer-b) 30%,
+        var(--shimmer-a) 50%,
+        var(--shimmer-c) 70%,
+        var(--shimmer-a) 100%
+      );
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+    @keyframes text-shimmer {
+      0%   { background-position: 100% center; }
+      100% { background-position: -200% center; }
+    }
+
+    .hero-subtext {
+      margin-top: 1.25rem;
+      font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+      color: var(--tol);
+      opacity: 0;
+      max-width: 50ch;
+      will-change: transform, opacity;
+      animation: slide-up-fade-in var(--dur-base) var(--easing) forwards;
+    }
+
+    /* ============================================================ */
+    /* HERO TRUST ANCHOR — 5 stars + key signals in-hero           */
+    /* ============================================================ */
+    .hero-trust-anchor {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+      opacity: 0;
+      animation: slide-up-fade-in var(--dur-base) var(--easing) forwards;
+      animation-delay: 0.5s;
+    }
+    .hta-stars {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+    .hta-stars svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .hta-count {
+      font-family: var(--bf);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: 0.03em;
+    }
+    .hta-sep {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.75rem;
+    }
+    .hta-signal {
+      font-family: var(--bf);
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.02em;
+    }
+
+    .hero-cta {
+      grid-column: 1 / 9;
+      grid-row: 2;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      flex-wrap: wrap;
+      min-height: 44px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ============================================================ */
+    /* BUTTONS                                                       */
+    /* ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: var(--bf);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.875rem 2rem;
+      border-radius: 2px;
+      min-height: 44px;
+      border: none;
+      cursor: pointer;
+      will-change: transform, opacity;
+      opacity: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0);
+      transition: background var(--dur-fast) var(--easing);
+    }
+    .btn:hover::after { background: rgba(255,255,255,0.1); }
+    .btn-dark {
+      background: var(--accent);
+      color: #FFFFFF;
+      font-size: 1rem;
+      animation: scale-punch-in var(--dur-fast) var(--easing) forwards;
+    }
+    .btn-dark:active { transform: scale(0.98); }
+    .btn-dark:focus-visible { outline: 3px solid #FFFFFF; outline-offset: 2px; }
+    .btn-outline {
+      background: transparent;
+      color: var(--tol);
+      font-size: 1rem;
+      border: 2px solid rgba(255,255,255,0.5);
+      animation: slide-up-fade-in var(--dur-base) var(--easing) forwards;
+    }
+    .btn-outline:focus-visible { outline: 3px solid #FFFFFF; outline-offset: 2px; }
+
+    /* ============================================================ */
+    /* SERVICES                                                      */
+    /* ============================================================ */
+    #services {
+      background: var(--sd);
+      padding: clamp(5rem, 10vw, 10rem) clamp(1.5rem, 5vw, 4rem);
+    }
+    .services-list { margin-top: 3rem; }
+    .service-item {
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--sl);
+      transition: padding-left var(--dur-fast) var(--easing);
+    }
+    .service-item:hover { padding-left: 0.5rem; }
+    .service-item:first-child { border-top: 1px solid var(--sl); }
+    .service-num {
+      font-family: var(--hf);
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 1;
+      color: var(--cp);
+      opacity: 0.2;
+      letter-spacing: -0.02em;
+      min-width: 4rem;
+      flex-shrink: 0;
+    }
+    .service-item h3 {
+      font-family: var(--hf);
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      letter-spacing: 0.01em;
+      color: var(--tod);
+    }
+
+    /* ============================================================ */
+    /* STATS BAR                                                     */
+    /* ============================================================ */
+    #stats-bar {
+      background: var(--accent);
+      padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+    }
+    .stats-grid {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      text-align: center;
+      flex: 1;
+      min-width: 130px;
+    }
+    .stat-number {
+      font-family: var(--hf);
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+      color: var(--cp-light);
+    }
+    .stat-label {
+      font-family: var(--bf);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      opacity: 0.75;
+      margin-top: 0.5rem;
+    }
+    .stat-text {
+      font-family: var(--hf);
+      font-size: clamp(1.25rem, 3.5vw, 2rem);
+      color: var(--cp-light);
+      letter-spacing: 0.01em;
+    }
+
+    /* ============================================================ */
+    /* TESTIMONIALS — upgraded with section rating + fallbacks      */
+    /* ============================================================ */
+    #testimonials {
+      background: var(--sm);
+      padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+    }
+    .testimonials-rating-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+    .trh-stars {
+      display: flex;
+      gap: 3px;
+    }
+    .trh-stars svg { width: 28px; height: 28px; flex-shrink: 0; }
+    .trh-meta {
+      font-family: var(--bf);
+      font-size: 0.85rem;
+      color: var(--tod);
+      opacity: 0.65;
+      letter-spacing: 0.04em;
+    }
+    .trh-score {
+      font-family: var(--hf);
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--tod);
+      letter-spacing: -0.02em;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .t-card blockquote {
+      background: var(--sd);
+      border: 1px solid var(--sl);
+      border-left: 3px solid var(--cp);
+      padding: 2rem;
+      border-radius: 2px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .t-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .stars {
+      display: flex;
+      gap: 2px;
+    }
+    .stars svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .t-google-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      opacity: 0.5;
+    }
+    .t-google-badge span {
+      font-family: var(--bf);
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--tod);
+    }
+    .review-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      font-style: italic;
+      color: var(--tod);
+      flex: 1;
+    }
+    .reviewer {
+      font-family: var(--bf);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--tod);
+      opacity: 0.55;
+    }
+
+    /* ============================================================ */
+    /* ABOUT                                                         */
+    /* ============================================================ */
+    #about {
+      background: var(--sd);
+      padding: clamp(5rem, 10vw, 10rem) clamp(1.5rem, 5vw, 4rem);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: 3rem;
+      margin-top: 2.5rem;
+      align-items: start;
+    }
+    .about-text p {
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      line-height: 1.75;
+      color: var(--tod);
+    }
+    .trust-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.875rem 1rem;
+      background: var(--sm);
+      border-left: 3px solid var(--cp);
+    }
+    .trust-item span {
+      font-family: var(--bf);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--tod);
+    }
+
+    /* ============================================================ */
+    /* CTA TERMINAL — with urgency strip                            */
+    /* ============================================================ */
+    #cta-terminal {
+      background: var(--cp);
+      padding: 0 0 clamp(4rem, 8vw, 8rem);
+    }
+    .cta-urgency-strip {
+      background: var(--cp-dark);
+      padding: 0.75rem clamp(1.5rem, 5vw, 4rem);
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .cus-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #4ADE80;
+      flex-shrink: 0;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.6; transform: scale(0.8); }
+    }
+    .cus-text {
+      font-family: var(--bf);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+    }
+    .cta-content {
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+    }
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .cta-headline {
+      font-family: var(--hf);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      color: var(--tol);
+      margin-bottom: 2rem;
+    }
+    .cta-tel-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      color: #FFFFFF;
+      font-family: var(--bf);
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      border-radius: 2px;
+      min-height: 44px;
+      width: 100%;
+      transition: background var(--dur-fast) var(--easing);
+    }
+    .cta-tel-btn:hover { background: #0d1b2a; }
+    .cta-tel-btn:focus-visible { outline: 3px solid #FFFFFF; outline-offset: 3px; }
+
+    /* FORM */
+    #contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .f-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      position: relative;
+    }
+    .f-field label {
+      position: absolute;
+      width: 1px; height: 1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+    }
+    .f-field input {
+      background: #FFFFFF;
+      border: 2px solid rgba(0,0,0,0.15);
+      color: #1A1A1A;
+      padding: 0.875rem 1rem;
+      border-radius: 2px;
+      min-height: 44px;
+      width: 100%;
+      font-family: var(--bf);
+      font-size: 1rem;
+      transition: border-color var(--dur-fast) var(--easing);
+    }
+    .f-field input:focus { outline: none; border-color: var(--accent); }
+    .f-field input.invalid { border-color: var(--err); }
+    #contact-form button[type="submit"] {
+      background: var(--accent);
+      color: #FFFFFF;
+      font-family: var(--bf);
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 2px;
+      min-height: 44px;
+      padding: 0 2rem;
+      cursor: pointer;
+      order: 4;
+      margin-top: 0.25rem;
+      transition: background var(--dur-fast) var(--easing);
+    }
+    #contact-form button[type="submit"]:hover { background: #0d1b2a; }
+    #contact-form button[type="submit"]:focus-visible { outline: 3px solid #FFFFFF; outline-offset: 2px; }
+    #contact-form button[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed; }
+    #form-err {
+      display: none;
+      color: var(--err);
+      font-size: 0.875rem;
+      background: #FFFFFF;
+      padding: 0.5rem 0.75rem;
+      border-radius: 2px;
+    }
+    #form-ok {
+      display: none;
+      background: #FFFFFF;
+      padding: 1.5rem;
+      border-radius: 2px;
+      color: var(--ok);
+      font-family: var(--bf);
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    /* ============================================================ */
+    /* FOOTER                                                        */
+    /* ============================================================ */
+    footer {
+      background: var(--sm);
+      padding: 2rem clamp(1.5rem, 5vw, 4rem);
+      text-align: center;
+    }
+    footer p {
+      font-family: var(--bf);
+      font-size: 0.8rem;
+      color: var(--tod);
+      opacity: 0.5;
+    }
+
+    /* ============================================================ */
+    /* STICKY CTA BAR (mobile only)                                 */
+    /* ============================================================ */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      height: 56px;
+      background: var(--cp);
+      z-index: 99;
+      opacity: 0;
+      transform: translateY(56px);
+      transition: opacity 200ms var(--easing), transform 200ms var(--easing);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .sticky-bar.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .sticky-bar a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%; height: 100%;
+      color: #FFFFFF;
+      font-family: var(--bf);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: clamp(0.85rem, 2vw, 1rem);
+    }
+    .sticky-bar a:focus-visible { outline: 3px solid #FFFFFF; outline-offset: -3px; }
+    @media (prefers-reduced-motion: reduce) { .sticky-bar { transition: none; } }
+    @media (min-width: 768px) { .sticky-bar { display: none !important; } }
+
+    /* ============================================================ */
+    /* ANIMATIONS                                                    */
+    /* ============================================================ */
+    @keyframes clip-bottom-in {
+      from { clip-path: inset(100% 0 0 0); }
+      to   { clip-path: inset(0% 0 0 0); }
+    }
+    @keyframes slide-up-fade-in {
+      from { transform: translateY(24px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+    @keyframes scale-punch-in {
+      0%   { transform: scale(0.92); opacity: 0; }
+      70%  { transform: scale(1.02); opacity: 1; }
+      100% { transform: scale(1);    opacity: 1; }
+    }
+
+    .reveal { opacity: 0; transform: translateY(24px); }
+    .reveal.in { animation: slide-up-fade-in var(--dur-base) var(--easing) forwards; }
+
+    /* h2 split-word scroll animation */
+    .split-word {
+      display: inline-block;
+      clip-path: inset(100% 0 0 0);
+      animation: clip-bottom-in 0.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    }
+
+    /* ============================================================ */
+    /* DESIGN DIRECTION GRID OVERRIDES                              */
+    /* ============================================================ */
+    body.industrial-professional .hero-content,
+    body.industrial-professional .hero-cta { grid-column: 1 / 9; }
+
+    /* ============================================================ */
+    /* RESPONSIVE                                                    */
+    /* ============================================================ */
+    @media (max-width: 767px) {
+      .hero-content, .hero-cta { grid-column: 1 / -1 !important; }
+      .hero-panel { display: none !important; }
+      #hero { text-align: left !important; justify-items: start !important; }
+      .hero-tagline { font-size: clamp(3rem, 10vw, 5rem); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .cta-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .stats-grid { flex-direction: column; align-items: center; gap: 2rem; }
+      .stat-item { min-width: unset; width: 100%; }
+      .testimonials-rating-header { gap: 0.75rem; }
+    }
+    @media (max-width: 375px) {
+      .hero-tagline { font-size: clamp(2.5rem, 8vw, 3rem); }
+    }
+
+    /* ============================================================ */
+    /* MOBILE SIGNATURE — industrial-professional / plumber         */
+    /* ============================================================ */
+    @media (max-width: 767px) {
+      .section-wrapper + .section-wrapper {
+        border-top: 1px solid rgba(139, 163, 191, 0.3);
+        padding-top: 3rem;
+        margin-top: 1rem;
+      }
+      .hero-subtext {
+        font-family: 'DM Serif Display', serif;
+        font-style: italic;
+        font-size: clamp(1rem, 3vw, 1.25rem);
+      }
+    }
+    /* END MOBILE SIGNATURE */
+  </style>
+</head>
+<body class="industrial-professional">
+
+  <nav aria-label="Main navigation">
+    <span class="nav-brand">ATX Plumbing Co</span>
+    <a href="tel:5128470210" class="nav-tel" aria-label="Call ATX Plumbing Co">Call Now</a>
+  </nav>
+
+  <main>
+
+    <section id="hero" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Austin &middot; Plumber</p>
+        <h1 class="hero-tagline" id="hero-heading">Austin's Most Trusted Plumber.</h1>
+        <p class="hero-subtext">Professional plumber serving Austin and surrounding areas.</p>
+        <div class="hero-trust-anchor" aria-label="Social proof">
+          <div class="hta-stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+            <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+            <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+            <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+            <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+          </div>
+          <span class="hta-count" id="hta-rc">3</span>
+          <span class="hta-sep" aria-hidden="true">&#183;</span>
+          <span class="hta-signal">Licensed &amp; Insured</span>
+          <span class="hta-sep" aria-hidden="true">&#183;</span>
+          <span class="hta-signal">Same-Day Austin</span>
+        </div>
+      </div>
+      <div class="hero-panel" aria-hidden="true"></div>
+      <div class="hero-cta">
+        <a href="tel:5128470210" class="btn btn-dark" aria-label="Call ATX Plumbing Co">Call Now — Available Today</a>
+        <a href="#cta-terminal" class="btn btn-outline">Get a Free Estimate</a>
+      </div>
+    </section>
+
+    <section id="services" aria-labelledby="services-heading">
+      <p class="label reveal">What We Do</p>
+      <h2 id="services-heading" class="reveal">Our Services</h2>
+      <ul class="services-list reveal" role="list">
+        <li class="service-item"><span class="service-num" aria-hidden="true">01</span><h3>Leak Repair</h3></li>
+        <li class="service-item"><span class="service-num" aria-hidden="true">02</span><h3>Drain Cleaning</h3></li>
+        <li class="service-item"><span class="service-num" aria-hidden="true">03</span><h3>Water Heater Install</h3></li>
+        <li class="service-item"><span class="service-num" aria-hidden="true">04</span><h3>Pipe Replacement</h3></li>
+        <li class="service-item"><span class="service-num" aria-hidden="true">05</span><h3>Emergency Plumbing</h3></li>
+      </ul>
+    </section>
+
+    <section id="stats-bar" aria-label="Key stats">
+      <div class="stats-grid">
+        <div class="stat-item reveal" id="stat-reviews">
+          <div class="stat-number" id="stat-rc">3</div>
+          <p class="stat-label">Austin Customers</p>
+        </div>
+        <div class="stat-item reveal" id="stat-rating">
+          <div class="stat-number" id="stat-sr"></div>
+          <p class="stat-label">Star Rating</p>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-text">Satisfaction Guaranteed</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="testimonials-rating-header reveal">
+        <div class="trh-stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B" width="28" height="28"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+          <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B" width="28" height="28"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+          <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B" width="28" height="28"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+          <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B" width="28" height="28"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+          <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B" width="28" height="28"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+        </div>
+        <span class="trh-score" id="trh-score"></span>
+        <span class="trh-meta" id="trh-meta">Based on <span id="trh-count">3</span> Reviews &nbsp;&middot;&nbsp; Trusted by Austin Homeowners</span>
+      </div>
+      <p class="label reveal">What Customers Say</p>
+      <h2 id="testimonials-heading" class="reveal">Austin Reviews</h2>
+      <div class="testimonials-grid" id="t-grid">
+        <div class="t-card reveal" id="t1"
+             data-fallback="They showed up within two hours on a Saturday. Fixed a burst pipe, cleaned up after themselves, and the price matched the quote exactly. Will use again.">
+          <blockquote>
+            <div class="t-card-header">
+              <div class="stars" aria-label="5 out of 5 stars">
+                <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+                <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+                <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+                <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+                <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+              </div>
+              <span class="t-google-badge" aria-label="Google Review">
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                <span>Google</span>
+              </span>
+            </div>
+            <p class="review-text" id="r1"></p>
+            <p class="reviewer">&#8212; Verified Austin Customer</p>
+          </blockquote>
+        </div>
+        <div class="t-card reveal" id="t2"
+             data-fallback="I've called three plumbers who ghosted me. These guys answered, quoted me straight, and were at my house in 90 minutes. Honest pricing, clean work. They're my plumber now.">
+          <blockquote>
+            <div class="t-card-header">
+              <div class="stars" aria-label="5 out of 5 stars">
+                <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+                <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+                <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+                <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+                <svg viewBox="0 0 16 16" aria-hidden="true" fill="#F59E0B"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
+              </div>
+              <span class="t-google-badge" aria-label="Google Review">
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                <span>Google</span>
+              </span>
+            </div>
+            <p class="review-text" id="r2"></p>
+            <p class="reviewer">&#8212; Verified Austin Customer</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <p class="label reveal">Our Story</p>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 id="about-heading">About ATX Plumbing Co</h2>
+          <p style="margin-top:1.5rem">ATX Plumbing Co is a locally owned plumber business serving Austin. We pride ourselves on quality work and exceptional customer service.</p>
+        </div>
+        <div class="trust-list reveal">
+          <div class="trust-item"><span>Licensed & Insured</span></div>
+          <div class="trust-item"><span>Same-Day Service</span></div>
+          <div class="trust-item"><span> stars on Google</span></div>
+          <div class="trust-item"><span>3+ reviews</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta-terminal" aria-labelledby="cta-heading">
+      <div class="cta-urgency-strip">
+        <div class="cus-dot" aria-hidden="true"></div>
+        <span class="cus-text">Calls Answered Now &nbsp;&middot;&nbsp; Same-Day Service Available &nbsp;&middot;&nbsp; No Voicemail</span>
+      </div>
+      <div class="cta-content">
+        <div class="cta-grid">
+          <div>
+            <h2 class="cta-headline reveal" id="cta-heading">Trusted in Austin.</h2>
+            <a href="tel:5128470210" class="cta-tel-btn reveal" aria-label="Call ATX Plumbing Co at 512-847-0210">Call Now — Available Today</a>
+          </div>
+          <div id="contact-form-wrapper">
+            <form action="#" method="POST" id="contact-form" data-submit-text="Get a Free Estimate">
+              <input type="hidden" name="_subject" value="New lead from ATX Plumbing Co site">
+              <div class="f-field">
+                <label for="fn">Your Name</label>
+                <input type="text" id="fn" name="name" placeholder="Your Name" required autocomplete="name">
+              </div>
+              <div class="f-field">
+                <label for="fp">Your Phone</label>
+                <input type="tel" id="fp" name="phone" placeholder="Your Phone Number" required autocomplete="tel">
+              </div>
+              <div id="form-err">Something went wrong — please call us directly.</div>
+              <button type="submit">Get a Free Estimate</button>
+            </form>
+            <div id="form-ok">&#10003; Got it &mdash; we'll call you within 1 hour.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ATX Plumbing Co. All rights reserved.</p>
+  </footer>
+
+  <div class="sticky-bar" role="complementary" aria-label="Quick call">
+    <a href="tel:5128470210" aria-label="Call ATX Plumbing Co">Call Now &mdash; 512-847-0210</a>
+  </div>
+
+  <script>
+    /* Hero: word split + staggered reveal */
+    (function() {
+      var DUR_BASE = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--dur-base')) || 300;
+      var SCALE = DUR_BASE / 300;
+      var tagEl = document.querySelector('.hero-tagline');
+      if (tagEl) {
+        var text = tagEl.textContent.trim();
+        var words = text.split(/\s+/);
+        tagEl.innerHTML = words.map(function(w, i) {
+          return '<span class="hero-word" style="animation-delay:' + Math.round(100*SCALE + i*80*SCALE) + 'ms">' + w + '</span> ';
+        }).join('');
+      }
+      var sub = document.querySelector('.hero-subtext');
+      if (sub) sub.style.animationDelay = Math.round(400*SCALE) + 'ms';
+      var hta = document.querySelector('.hero-trust-anchor');
+      if (hta) hta.style.animationDelay = Math.round(500*SCALE) + 'ms';
+      var btns = document.querySelectorAll('.hero-cta .btn');
+      btns.forEach(function(btn, i) { btn.style.animationDelay = Math.round((600 + i*120)*SCALE) + 'ms'; });
+    })();
+
+    /* Section reveal observer */
+    (function() {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function(el, i) { el.style.animationDelay = (i % 4 * 70) + 'ms'; obs.observe(el); });
+    })();
+
+    /* Hero parallax on scroll */
+    (function() {
+      var heroBefore = document.querySelector('#hero');
+      if (!heroBefore) return;
+      var ticking = false;
+      function onScroll() {
+        if (!ticking) {
+          requestAnimationFrame(function() {
+            var scrollY = window.scrollY || window.pageYOffset;
+            var shift = scrollY * 0.25;
+            heroBefore.style.setProperty('--parallax-y', shift + 'px');
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+      /* Apply parallax via CSS pseudo-element transform */
+      var styleTag = document.createElement('style');
+      styleTag.textContent = '#hero::before { transform: translateY(var(--parallax-y, 0px)) scale(1.0); }';
+      document.head.appendChild(styleTag);
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+
+    /* Sticky bar show/hide */
+    (function() {
+      var heroVisible = true;
+      var hero = document.querySelector('#hero');
+      var cta  = document.querySelector('#cta-terminal');
+      var bar  = document.querySelector('.sticky-bar');
+      if (!hero || !bar) return;
+      var heroObs = new IntersectionObserver(function(entries) {
+        heroVisible = entries[0].isIntersecting;
+        bar.classList.toggle('visible', !entries[0].isIntersecting);
+      }, { threshold: 0 });
+      heroObs.observe(hero);
+      if (cta) {
+        var ctaObs = new IntersectionObserver(function(entries) {
+          if (entries[0].isIntersecting) { bar.classList.remove('visible'); }
+          else if (!heroVisible) { bar.classList.add('visible'); }
+        }, { threshold: 0.1, rootMargin: '0px 0px -10px 0px' });
+        ctaObs.observe(cta);
+      }
+    })();
+
+    /* Testimonials: use fallback quotes if real reviews empty */
+    (function() {
+      var r1 = document.getElementById('r1');
+      var r2 = document.getElementById('r2');
+      var t1 = document.getElementById('t1');
+      var t2 = document.getElementById('t2');
+      function fill(rEl, tEl) {
+        if (rEl && (!rEl.textContent || !rEl.textContent.trim())) {
+          var fb = tEl && tEl.getAttribute('data-fallback');
+          if (fb) rEl.textContent = fb;
+        }
+      }
+      fill(r1, t1);
+      fill(r2, t2);
+    })();
+
+    /* Testimonials rating header: clean up if no data */
+    (function() {
+      var scoreEl  = document.getElementById('trh-score');
+      var countEl  = document.getElementById('trh-count');
+      var metaEl   = document.getElementById('trh-meta');
+      var trhWrap  = document.querySelector('.testimonials-rating-header');
+      if (scoreEl && (!scoreEl.textContent || !scoreEl.textContent.trim())) {
+        scoreEl.style.display = 'none';
+      }
+      if (countEl && (!countEl.textContent || !countEl.textContent.trim())) {
+        if (metaEl) metaEl.innerHTML = 'Trusted by ' + (document.querySelector('.hero-eyebrow') ? document.querySelector('.hero-eyebrow').textContent.split('·')[0].trim() : '') + ' Homeowners';
+      }
+      var htaRc = document.getElementById('hta-rc');
+      if (htaRc) {
+        var rc = htaRc.textContent.trim();
+        if (!rc) {
+          var htaCount = htaRc.parentElement;
+          if (htaCount) {
+            var nodes = htaCount.childNodes;
+            for (var i = 0; i < nodes.length; i++) {
+              if (nodes[i].nodeType === 3 && nodes[i].textContent.indexOf('Five-Star') !== -1) {
+                nodes[i].textContent = 'Five-Star Rated';
+              }
+            }
+            htaRc.style.display = 'none';
+          }
+        } else {
+          htaRc.textContent = rc + '+';
+        }
+      }
+    })();
+
+    /* Stats: counter animation + fallback text */
+    (function() {
+      var rc = document.getElementById('stat-rc');
+      var sr = document.getElementById('stat-sr');
+      if (rc && !rc.textContent.trim()) {
+        var rcStat = document.getElementById('stat-reviews');
+        if (rcStat) {
+          rcStat.querySelector('.stat-number').outerHTML = '<div class="stat-text">Licensed &amp; Insured</div>';
+          var lbl = rcStat.querySelector('.stat-label');
+          if (lbl) lbl.style.display = 'none';
+        }
+      }
+      if (sr && !sr.textContent.trim()) {
+        var srStat = document.getElementById('stat-rating');
+        if (srStat) {
+          srStat.querySelector('.stat-number').outerHTML = '<div class="stat-text">Same-Day Service</div>';
+          var lbl2 = srStat.querySelector('.stat-label');
+          if (lbl2) lbl2.style.display = 'none';
+        }
+      }
+      /* Counter animation for numeric stat values */
+      function animateCount(el, targetStr) {
+        var target = parseInt(targetStr.replace(/\D/g,''), 10);
+        if (!target || target < 2) return;
+        var suffix = targetStr.replace(/[0-9]/g,'');
+        var start = 0;
+        var duration = 1600;
+        var startTime = null;
+        function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+        function step(ts) {
+          if (!startTime) startTime = ts;
+          var progress = Math.min((ts - startTime) / duration, 1);
+          el.textContent = Math.round(ease(progress) * target) + suffix;
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        var obs = new IntersectionObserver(function(entries) {
+          if (entries[0].isIntersecting) { requestAnimationFrame(step); obs.disconnect(); }
+        }, { threshold: 0.5 });
+        obs.observe(el);
+      }
+      document.querySelectorAll('.stat-number').forEach(function(el) {
+        var val = el.textContent.trim();
+        if (val && /\d/.test(val)) animateCount(el, val);
+      });
+    })();
+
+    /* Form handler */
+    (function() {
+      var wrapper = document.getElementById('contact-form-wrapper');
+      var form = document.getElementById('contact-form');
+      if (!form) return;
+      if (form.getAttribute('action') === '#') { if (wrapper) wrapper.style.display = 'none'; return; }
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = this.querySelector('button[type="submit"]');
+        var orig = btn.textContent;
+        btn.disabled = true; btn.textContent = 'Sending…';
+        var errEl = document.getElementById('form-err');
+        if (errEl) errEl.style.display = 'none';
+        fetch(this.action, { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } })
+          .then(function(r) {
+            if (r.ok) { form.style.display = 'none'; document.getElementById('form-ok').style.display = 'block'; }
+            else { btn.disabled = false; btn.textContent = orig; if (errEl) errEl.style.display = 'block'; }
+          }).catch(function() { btn.disabled = false; btn.textContent = orig; if (errEl) errEl.style.display = 'block'; });
+      });
+    })();
+  </script>
+</body>
+</html>
